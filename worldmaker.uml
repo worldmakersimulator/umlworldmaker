@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_MN0NQNrCEeKWB6e8qrSKAQ" name="NewModel">
+  <packageImport xmi:id="_DQ4SANrDEeKWB6e8qrSKAQ">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_bfsb4NrCEeKWB6e8qrSKAQ" name="Kernel">
+    <ownedAttribute xmi:id="_jKBDQNrCEeKWB6e8qrSKAQ" name="simulation_time">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EDouble"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jKHJ4NrCEeKWB6e8qrSKAQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jKHJ4drCEeKWB6e8qrSKAQ" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_78TRINrCEeKWB6e8qrSKAQ" name="mode" type="_tbhIQNrCEeKWB6e8qrSKAQ" aggregation="composite">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_78TRIdrCEeKWB6e8qrSKAQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_78TRItrCEeKWB6e8qrSKAQ" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_KigFgNrDEeKWB6e8qrSKAQ" name="elapsed_time">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EDouble"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KimMINrDEeKWB6e8qrSKAQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KimMIdrDEeKWB6e8qrSKAQ" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ughzENrDEeKWB6e8qrSKAQ" name="mod_manager" type="_sKa3UNrDEeKWB6e8qrSKAQ" aggregation="composite">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ughzEdrDEeKWB6e8qrSKAQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ughzEtrDEeKWB6e8qrSKAQ" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_QOF54NrEEeKWB6e8qrSKAQ" name="initialize"/>
+    <ownedOperation xmi:id="_RkyAANrEEeKWB6e8qrSKAQ" name="register_module"/>
+    <ownedOperation xmi:id="_URA8wNrEEeKWB6e8qrSKAQ" name="initialize_modules"/>
+    <ownedOperation xmi:id="_W6PBwNrEEeKWB6e8qrSKAQ" name="load_modules"/>
+    <ownedOperation xmi:id="_Y9ddwNrEEeKWB6e8qrSKAQ" name="configure_simulation">
+      <ownedRule xmi:id="Message-arguments" name="arguments">
+        <ownedComment xmi:id="Message-arguments-_ownedComment.0" annotatedElement="Message-arguments">
+          <body>Arguments of a Message must only be: i) attributes of the sending lifeline ii) constants iii) symbolic values (which are wildcard values representing any legal value) iv) explicit parameters of the enclosing Interaction v) attributes of the class owning the Interaction</body>
+        </ownedComment>
+        <constrainedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Message"/>
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="Message-arguments-_specification">
+          <language>OCL</language>
+          <body>true</body>
+        </specification>
+      </ownedRule>
+      <ownedParameter xmi:id="_iNWUwNrEEeKWB6e8qrSKAQ" name="mode" type="_tbhIQNrCEeKWB6e8qrSKAQ"/>
+      <ownedParameter xmi:id="_3SneUNrEEeKWB6e8qrSKAQ" name="time">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_7aTscNrEEeKWB6e8qrSKAQ" name="simulate"/>
+    <ownedOperation xmi:id="_8mOF8NrEEeKWB6e8qrSKAQ" name="unload_modules"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Enumeration" xmi:id="_tbhIQNrCEeKWB6e8qrSKAQ" name="MODE">
+    <ownedLiteral xmi:id="_wMI1wNrCEeKWB6e8qrSKAQ" name="FASTSIM">
+      <specification xmi:type="uml:LiteralInteger" xmi:id="_wMI1wdrCEeKWB6e8qrSKAQ"/>
+    </ownedLiteral>
+    <ownedLiteral xmi:id="_0dRTwNrCEeKWB6e8qrSKAQ" name="REALTIME">
+      <specification xmi:type="uml:LiteralInteger" xmi:id="_0dRTwdrCEeKWB6e8qrSKAQ" value="1"/>
+    </ownedLiteral>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_UEVoINrDEeKWB6e8qrSKAQ" name="mODEsToKernels" memberEnd="_UEVoIdrDEeKWB6e8qrSKAQ _UEVoJNrDEeKWB6e8qrSKAQ" navigableOwnedEnd="_UEVoIdrDEeKWB6e8qrSKAQ _UEVoJNrDEeKWB6e8qrSKAQ">
+    <ownedEnd xmi:id="_UEVoIdrDEeKWB6e8qrSKAQ" name="mODEs" type="_tbhIQNrCEeKWB6e8qrSKAQ" association="_UEVoINrDEeKWB6e8qrSKAQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UEVoItrDEeKWB6e8qrSKAQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UEVoI9rDEeKWB6e8qrSKAQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_UEVoJNrDEeKWB6e8qrSKAQ" name="kernels" type="_bfsb4NrCEeKWB6e8qrSKAQ" association="_UEVoINrDEeKWB6e8qrSKAQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UEVoJdrDEeKWB6e8qrSKAQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UEVoJtrDEeKWB6e8qrSKAQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_sKa3UNrDEeKWB6e8qrSKAQ" name="ModuleManager">
+    <ownedAttribute xmi:id="_TLCWsNrFEeKWB6e8qrSKAQ" name="module_list" type="_OdlJENrFEeKWB6e8qrSKAQ" aggregation="composite">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TLCWsdrFEeKWB6e8qrSKAQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TLCWstrFEeKWB6e8qrSKAQ" value="*"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_N8cVcNrGEeKWB6e8qrSKAQ" name="init_modules"/>
+    <ownedOperation xmi:id="_OMducNrGEeKWB6e8qrSKAQ" name="load_modules"/>
+    <ownedOperation xmi:id="_OPhCcNrGEeKWB6e8qrSKAQ" name="tick_modules">
+      <ownedParameter xmi:id="_TbsMYNrGEeKWB6e8qrSKAQ" name="delta">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_RVgjANrGEeKWB6e8qrSKAQ" name="unload_modules"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_1Q4FgNrDEeKWB6e8qrSKAQ" name="moduleManagersToKernels" memberEnd="_1Q4FgdrDEeKWB6e8qrSKAQ _1Q4FhNrDEeKWB6e8qrSKAQ" navigableOwnedEnd="_1Q4FgdrDEeKWB6e8qrSKAQ _1Q4FhNrDEeKWB6e8qrSKAQ">
+    <ownedEnd xmi:id="_1Q4FgdrDEeKWB6e8qrSKAQ" name="moduleManagers" type="_sKa3UNrDEeKWB6e8qrSKAQ" association="_1Q4FgNrDEeKWB6e8qrSKAQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1Q4FgtrDEeKWB6e8qrSKAQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1Q4Fg9rDEeKWB6e8qrSKAQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_1Q4FhNrDEeKWB6e8qrSKAQ" name="kernels" type="_bfsb4NrCEeKWB6e8qrSKAQ" association="_1Q4FgNrDEeKWB6e8qrSKAQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1Q4FhdrDEeKWB6e8qrSKAQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1Q4FhtrDEeKWB6e8qrSKAQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_OdlJENrFEeKWB6e8qrSKAQ" name="Module">
+    <ownedAttribute xmi:id="_qSkS8NrFEeKWB6e8qrSKAQ" name="name">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qSqZkNrFEeKWB6e8qrSKAQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qSqZkdrFEeKWB6e8qrSKAQ" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_uGXUsNrFEeKWB6e8qrSKAQ" name="get_module_name"/>
+    <ownedOperation xmi:id="_4-ZOMNrFEeKWB6e8qrSKAQ" name="initialize" isAbstract="true"/>
+    <ownedOperation xmi:id="_7TKtMNrFEeKWB6e8qrSKAQ" name="load" isAbstract="true"/>
+    <ownedOperation xmi:id="_8BCf0NrFEeKWB6e8qrSKAQ" name="tick" isAbstract="true">
+      <ownedParameter xmi:id="_-uzGkNrFEeKWB6e8qrSKAQ" name="delta">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_8OMyENrFEeKWB6e8qrSKAQ" name="unload" isAbstract="true"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_hQ7TUNrFEeKWB6e8qrSKAQ" name="modulesToModuleManagers" memberEnd="_hQ7TUdrFEeKWB6e8qrSKAQ _hQ7TVNrFEeKWB6e8qrSKAQ" navigableOwnedEnd="_hQ7TUdrFEeKWB6e8qrSKAQ _hQ7TVNrFEeKWB6e8qrSKAQ">
+    <ownedEnd xmi:id="_hQ7TUdrFEeKWB6e8qrSKAQ" name="modules" type="_OdlJENrFEeKWB6e8qrSKAQ" association="_hQ7TUNrFEeKWB6e8qrSKAQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hQ7TUtrFEeKWB6e8qrSKAQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hQ7TU9rFEeKWB6e8qrSKAQ" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_hQ7TVNrFEeKWB6e8qrSKAQ" name="moduleManagers" type="_sKa3UNrDEeKWB6e8qrSKAQ" association="_hQ7TUNrFEeKWB6e8qrSKAQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hQ7TVdrFEeKWB6e8qrSKAQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hQ7TVtrFEeKWB6e8qrSKAQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_LH4GoNrHEeKWB6e8qrSKAQ" clientDependency="_SOb5oNrHEeKWB6e8qrSKAQ" name="WorldManager">
+    <interfaceRealization xmi:id="_SOb5oNrHEeKWB6e8qrSKAQ" client="_LH4GoNrHEeKWB6e8qrSKAQ" supplier="_OdlJENrFEeKWB6e8qrSKAQ" contract="_OdlJENrFEeKWB6e8qrSKAQ"/>
+    <ownedOperation xmi:id="_YAzg4NrHEeKWB6e8qrSKAQ" name="initialize"/>
+    <ownedOperation xmi:id="_ZNq8oNrHEeKWB6e8qrSKAQ" name="load"/>
+    <ownedOperation xmi:id="_ZSoVINrHEeKWB6e8qrSKAQ" name="tick">
+      <ownedParameter xmi:id="_biQOYNrHEeKWB6e8qrSKAQ" name="delta">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_ZWKKQNrHEeKWB6e8qrSKAQ" name="unload"/>
+  </packagedElement>
+</uml:Model>
